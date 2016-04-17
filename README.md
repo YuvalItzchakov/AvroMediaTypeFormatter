@@ -7,5 +7,11 @@ Contains a wrapper around Microsoft.Hadoop.Avro which allows to work with runtim
 Add it to the global configuration inside the `WebApiConfig.Register` method:
 
 ```c#
-config.Formatters.Add(new AvroMediaTypeFormatter());
+public static class WebApiConfig
+{
+    public static void Register(HttpConfiguration config)
+    {
+        config.Formatters.Add(new AvroMediaTypeFormatter());
+    }
+}
 ```
